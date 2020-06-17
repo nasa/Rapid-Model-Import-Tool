@@ -1,0 +1,17 @@
+How to work with blender in vs code:
+
+1. Open vs code
+
+2. Open 'Extensions' side tab
+
+3. Search for the extension 'Blender Development'
+
+4. Install the extension 'Blender Development'
+
+5. Press 'F1' to open 'Command Palette'
+
+6. Use 'Blender: Start' to start debugging code in blender
+
+	- select blender.exe to run
+
+7. Use 'Blender: Reload Addons' to update your addon in blender

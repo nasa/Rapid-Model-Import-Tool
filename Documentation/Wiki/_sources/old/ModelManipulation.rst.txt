@@ -1,0 +1,49 @@
+Blender Model Manipulation Functions
+=====================================
+
+This page contains a guide to all functions written by Ben Fairlamb over summer 2019
+
+apply_modifiers()
+-----------------
+
+ - Found in Utils\\applyModifiers.py
+
+This function applies all object modifiers. This function is separated from export as the native export's apply modifiers option is slow.
+
+cleanUp(percent)
+----------------
+
+- Found in RMIT_BlenderDriver.py
+
+ARGS:
+Float **percent**
+
+ - Percent of scene proportions to use for clean up in decimal form
+
+This function removes small objects relative to the size of the entire scene. The function calculates the axis alligned bounding box for the scene then uses the percent to create a smaller axis alligned bounding box that has sides percent length of the scene's. Any object that can fit in the box is then removed.
+
+deParent()
+----------
+
+ - Found in Utils\\deParentinator.py
+ 
+This function strips away any parent relations between objects. This flattens the object tree to a single layer. This function also removes any empty objects which have type='EMPTY'.
+
+modelPrep(sepByLoose)
+---------------------
+
+ - Found in Utils\\modelPrep.py
+
+ARGS:
+Bool **sepByLoose**
+
+ - Separates objects by loose if true
+
+This function does all the preprocessing before cleanup/decimate. It uses Blender's built in functions to:
+
+	- Separate objects by loose parts (loose parts are vertices/edges not connected to other vertices/edges)
+	- Center all objects origins to their centers
+	- Moves all objects so the group center is at the origin
+	- Freezes transformations
+
+This function also centers all objects to the origin.

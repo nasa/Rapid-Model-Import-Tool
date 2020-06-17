@@ -1,0 +1,104 @@
+Tanya Gupta  Summer 2018 Final Documentation Guide
+=====================================================
+
+The purpose of this document is to compile all of the work I completed as a summer intern at the Augmented & Virtual
+Reality (AVR) Lab at KSC in Summer 2018. Please refer to this for any tasks completed by me on the Rapid Model Import Tool (RMIT).
+
+**Terms to Know:**
+
+- CATIA - A multi-platform software suite for computer-aided design, computer-aided manufacturing, computer-aided engineering, PLM and 3D, developed by the French company Dassault Systèmes.
+- DELMIA - A Global Industrial Operations software that specializes in digital manufacturing and manufacturing simulation
+- Unity – Also known as Unity3D, Unity is a cross-platform game engine used to build high-quality 3D and 2D games and deploy them across mobile, desktop and VR/AR platforms
+- COLLADA/.DAE - An interchange file format for interactive 3D applications. The file extension is .DAE.
+- .OBJ – Also known as Wavefront OBJ, this is an open geometry definition file format. It is widely used across many 3D graphics applications.
+- 3DS Max – Also known as Autodesk’s 3D Studio Max, this is a software for 3D modeling, animation, rendering, and visualization.
+
+Discuss the issue, why it hasn’t been done before, what has been done before, and what we’re doing.
+
+**Breakdown of my tasks:**
+
+- Research Unity-compatible filetypes
+
+  - .FBX
+  - .OBJ
+  - .3DS
+  - .DAE
+
+- Research CATIA-exportable filetypes.
+
+  - .CGR
+  - .IGS
+  - .MODEL
+  - .STL
+  - .STP
+
+
+- Investigate different file conversion paths from CATIA to Unity
+
+  - NEVA Exporter tool (Design Vis) file conversion paths are shown in Figure 1
+
+ .. image:: _images\\Tanya\\image1.jpg
+    :align: center
+
+- Further compatible filetypes and file conversion paths are shown with 3DS Max and Blender in Figure 2.
+
+ .. image:: _images\\Tanya\\image2.jpg
+    :align: center
+
+
+- Investigate the process of building 3D models using the CATIA framework.
+
+  - I am proficient in SOLIDWORKS and Autodesk Inventor from academic and prior experience.
+  - CATIA was intuitive and quick to pick up.
+  - Understanding its tools and functions helped me later in the development process.
+
+
+- Investigate potential upgrades that need to be made to NEVA.
+
+  - Some material assignments didn’t translate through NEVA exporter in CATIA.
+  - Orientation did not match that of CATIA or 3DS Max (Z-up).
+  - NEVA Model Viewer worked great as a self-check tool after each export.
+
+
+- Investigate decimation capabilities of Blender, 3DSMax, Polytrans, and compare strengths/weaknesses
+
+  - Jose’s tool allows for 3 resolutions of decimation upon import for the plug-in.
+  - Blender, if used in the same way 3DS Max is with Jose’s plug-in, will be a better option because it is a free, open-source software.
+  - CATIA also comes with its own decimation options before export through NEVA.
+
+
+- Investigate use of Python scripting to improve or enhance decimation capabilities of Blender.
+
+  - Several nodes/parts from CATIA design model disappeared from view after NEVA export.
+  - Scripting was added to Arjun’s Blender plug-in accordingly.
+
+
+- Investigate techniques for retaining textures.
+
+  - Updates to NEVA tool build fixed a previous issue of texture mapping symmetry.
+  - Both .DAE and .OBJ exports from CATIA now retain textures almost completely.
+
+References
+-----------
+
+**Tanya Gupta Abstract – For Education Office**
+
+The integration of virtual and augmented reality, sometimes called mixed reality, is an emerging technology which will likely skyrocket overnight much in the way smartphones did a decade ago. Kennedy Space Center’s Augmented and Virtual Reality (AVR) Lab is developing a Rapid Model Import Tool (RMIT) to create a quick and efficient way to bring NASA’s complex engineering 3D models into virtual and augmented environments. The long-term objective is to create a tool that will ultimately benefit KSC engineers. Its various uses within NASA can potentially span from astronaut training, to marketing, to public outreach, to name a few.
+
+Unity is a prolific cross-platform game engine that allows users to build high quality 2D and 3D games for desktop, mobile, web, and game console platforms. It is perhaps also the most widely used software for virtual reality game development. At the AVR lab, we are looking at alternative uses of Unity to build tools for NASA engineers to perform design, development, testing, and training on spacecraft, rocket delivery systems, ground support equipment, and facilities at KSC.
+
+As an intern for the RMIT project, I am charged with the task of performing research on Unity-compatible file types to develop an efficient, affordable, preservative process to bring models from CATIA 3D engineering software into the Unity environment. With a tool called the NASA Enterprise Visualization Application (NEVA), developed by the Boeing Design Visualization group at KSC, we are able to easily convert CATIA’s design models to .DAE (also known as COLLADA) and .OBJ file formats. I first reduce the polygon count of the model within CATIA itself, make any necessary tweaks to reduce the model further, and then export using NEVA. The .OBJ or .DAE files that I am left with are then converted by another intern to a Unity-compatible file format using a custom Python script. I have generated extensive documentation of this process in a NEVA User Guide. By the end of this semester, we will have built a solid framework for RMIT based on a thorough understanding of virtual reality specifications and file requirements, allowing future software development teams to go forward with development on the custom tool.
+
+**NEVA User Guide**
+
+I compiled a user guide on how to use the NEVA tool, an internally built software by the Design Visualization Group for quick exports of CATIA design models to COLLADA .DAE format and .OBJ format. A copy of this guide should be available on both the Vectr share with Design Viz, within this wiki, and on each of the AVR computers.
+
+**File Conversion Paths from CATIA to Unity**
+
+The following is a diagram of the file conversion paths discovered by the RMIT team. Both paths were demonstrated to work well with small to medium size COLLADA files exported using NEVA.
+
+ .. image:: _images\\Tanya\\image3.jpg
+    :align: center
+
+
+

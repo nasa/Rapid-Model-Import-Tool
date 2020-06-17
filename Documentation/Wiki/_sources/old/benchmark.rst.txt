@@ -1,0 +1,10 @@
+RMIT Benchmarks
+================
+
+This page contains all benchmarks for RMIT based on a collection of test files consisting of various file types, sizes, and poly counts.
+
+.. excel-table::
+	:file: Benchmarks.xlsx
+	:rows: 1:5
+
+Files above 30 million tris have been proven to give the gltf exporter difficulties as shown with CM Int & Ext (fbx). These files can be exported to other formats.

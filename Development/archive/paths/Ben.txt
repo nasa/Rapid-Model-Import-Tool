@@ -1,0 +1,5 @@
+test_args = ["C:\\Users\\AVR\\Documents\\AVR-004_RMIT_REPO\\Experimentation\\Blender_Clients\\64\\blender.exe",
+            "-P", "C:\\Users\\AVR\\Documents\\AVR-004_RMIT_REPO\\Experimentation\\Blender_Plugin\\RMIT_BlenderDriver.py",
+            "--", "-i", "E:\\Ben Fairlamb\\inputs\\Teapot.obj",
+            "-e", "E:\\Ben Fairlamb\\outputs\\Teapot.gltf",
+            "-d", "0.09", "-c", "0"]

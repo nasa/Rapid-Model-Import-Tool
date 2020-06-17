@@ -1,0 +1,74 @@
+File Formats Issues and Anomalies
+==================================
+
+This page is dedicated to the documentation of any known issues Anomalies encountered with the various 3D file formats. All file formats will be referenced by their file extensions.
+
+The Rundown
+------------
+
+.. csv-table:: Blender Compatability
+    :header: "File Format", "Blender Compatability"
+    
+    ".abc (Alembic)", "Compatible"
+    ".dae (COLLADA)", "See Below"
+    ".fbx", "See Below"
+	".gltf (Graphic Language Transmission Format)", "Compatible"
+    ".igs", "Not Compatible"
+    ".obj (Wavefront)", "See Below"
+    ".ply (Stanford)", "Compatible"
+    ".stl", "Compatible"
+    ".stp (STEP)", "Not Compatible"
+    ".wrl", "Compatible"
+
+Natively Supported File Formats
+--------------------------------
+
+These formats are supported natively by Blender to at least some capacity.
+
+.abc
+*****
+
+.abc is supported completely through Blender with no known issues or anomalies.
+
+.dae
+*****
+
+.dae has many different sub formats of which not all are supported. OpenCOLLADA is the only known form of .dae that is supported by Blender.
+
+.fbx
+*****
+
+.fbx has a history of different versions. Blender only supports .fbx version 7100 or newer.
+
+.gltf
+******
+
+.gltf is supported completely through Blender with no known issues or anomalies.
+
+.obj
+*****
+
+.obj is the weakest of the supported formats. All geometry is imported correctly, however the object hierarchy is not.
+
+.ply
+*****
+
+.ply is supported completely through Blender with no known issues or anomalies.
+
+.stl
+*****
+
+.stl is supported completely through Blender with no known issues or anomalies.
+
+.wrl
+*****
+
+.wrl is supported completely through Blender with no known issues or anomalies.
+
+Other Formats
+--------------
+
+All other formats are not supported by Blender in any capacity. This includes:
+
+ - .igs
+ - .stp

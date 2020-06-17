@@ -1,0 +1,542 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Source &mdash; RMIT 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Planned Updates" href="update.html" />
+    <link rel="prev" title="FAQ" href="faq.html" /> 
+<link rel="stylesheet" type="text/css" href="_static/handsontable.full.min.css">
+<script src="_static/handsontable.full.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> RMIT
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="feat.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Source</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#gui-rmitguiprocess-py">GUI - RMITGUIProcess.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#driver-rmit-blenderdriver-py">Driver - RMIT_BlenderDriver.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#unit-test-rmit-unittest-py">Unit Test - RMIT_UnitTest.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#setup-setup-py">Setup - setup.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#utils-utils">Utils - /Utils</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#controlwindow-py">controlWindow.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#errorlog-py">errorLog.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#import-catia-dae-v2-py">import_catia_dae_v2.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#importexport-py">importExport.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#modelprep-py">modelPrep.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#operatortest-py">operatorTest.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#processmodels-py">processModels.py</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="update.html">Planned Updates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact Info</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">RMIT</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Source</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/source.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="source">
+<h1>Source<a class="headerlink" href="#source" title="Permalink to this headline">¶</a></h1>
+<p>Below you will find the documentation for the code of this project.</p>
+<div class="section" id="gui-rmitguiprocess-py">
+<h2>GUI - RMITGUIProcess.py<a class="headerlink" href="#gui-rmitguiprocess-py" title="Permalink to this headline">¶</a></h2>
+<p>This file utilizes the PyQt5 library to create the main GUI interface of RMIT.</p>
+<blockquote>
+<div><p><strong>Functions:</strong></p>
+<blockquote>
+<div><dl class="py function">
+<dt id="setupUi">
+<code class="sig-name descname">setupUi</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">MainWindow</span></em><span class="sig-paren">)</span><a class="headerlink" href="#setupUi" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Description: Creates the GUI window.</p>
+<dl class="py function">
+<dt id="retranslateUi">
+<code class="sig-name descname">retranslateUi</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">MainWindow</span></em><span class="sig-paren">)</span><a class="headerlink" href="#retranslateUi" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Description: Handles the resizing of the window to keep the GUI the same.</p>
+<dl class="py function">
+<dt id="getFile">
+<code class="sig-name descname">getFile</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#getFile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Description: Button used to pick a valid file for processing.</p>
+<dl class="py function">
+<dt id="setOutput">
+<code class="sig-name descname">setOutput</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#setOutput" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Description: Button used to set output for file.</p>
+<dl class="py function">
+<dt id="sliderChange">
+<code class="sig-name descname">sliderChange</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sliderChange" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Description: GUI slider for the decimation option. Works in 10% increments.</p>
+<dl class="py function">
+<dt id="btnstate">
+<code class="sig-name descname">btnstate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">b</span></em><span class="sig-paren">)</span><a class="headerlink" href="#btnstate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Description: Records the user choice of decimation and if in headless mode.</p>
+<dl class="py function">
+<dt id="processFile">
+<code class="sig-name descname">processFile</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#processFile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Description: Processes the selected file through Blender.</p>
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="driver-rmit-blenderdriver-py">
+<h2>Driver - RMIT_BlenderDriver.py<a class="headerlink" href="#driver-rmit-blenderdriver-py" title="Permalink to this headline">¶</a></h2>
+<p>This is the file that is injected into Blender and ran through its python interface.</p>
+<blockquote>
+<div><p><strong>Functions:</strong></p>
+<blockquote>
+<div><dl class="py function">
+<dt id="resetBlend">
+<code class="sig-name descname">resetBlend</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#resetBlend" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Description: Clears the Blender scene of objects, meshes, cameras, etc.</p>
+<dl class="py function">
+<dt id="timeUpdate">
+<code class="sig-name descname">timeUpdate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">startTime</span></em>, <em class="sig-param"><span class="n">section</span></em>, <em class="sig-param"><span class="n">index</span></em><span class="sig-paren">)</span><a class="headerlink" href="#timeUpdate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Description: Allows time logging of routines.</p>
+<dl class="py function">
+<dt id="autopilot">
+<code class="sig-name descname">autopilot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autopilot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Description: This takes in the arguments sent through ArgParserUtil.py and runs the settings given. This is only ran in headless mode.</p>
+<dl class="py function">
+<dt id="smanualDriver">
+<code class="sig-name descname">smanualDriver</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#smanualDriver" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Description: This launches the GUI interface in Blender for running RMIT as normal.</p>
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="unit-test-rmit-unittest-py">
+<h2>Unit Test - RMIT_UnitTest.py<a class="headerlink" href="#unit-test-rmit-unittest-py" title="Permalink to this headline">¶</a></h2>
+<p>This file tests all the different use cases of RMIT to ensure stability at build.</p>
+<blockquote>
+<div><p><strong>Functions:</strong></p>
+<blockquote>
+<div><dl class="py function">
+<dt id="suite">
+<code class="sig-name descname">suite</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fileInput</span></em><span class="sig-paren">)</span><a class="headerlink" href="#suite" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Description: This runs through all the given tests and returns what passed and failed.</p>
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="setup-setup-py">
+<h2>Setup - setup.py<a class="headerlink" href="#setup-setup-py" title="Permalink to this headline">¶</a></h2>
+<p>This file builds the executable of RMIT.</p>
+</div>
+<div class="section" id="utils-utils">
+<h2>Utils - /Utils<a class="headerlink" href="#utils-utils" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div></div></blockquote>
+<p>Take the arguments from RMITGUIProcess and outputs them as their return values to RMIT_BlenderDriver.</p>
+<blockquote>
+<div><p><strong>Functions:</strong></p>
+<blockquote>
+<div><dl class="py function">
+<dt id="argEval">
+<code class="sig-name descname">argEval</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#argEval" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Description: Get the args passed to blender after “–”, all of which are ignored by blender so scripts may receive their own arguments.</p>
+</div></blockquote>
+</div></blockquote>
+<div class="section" id="controlwindow-py">
+<h3>controlWindow.py<a class="headerlink" href="#controlwindow-py" title="Permalink to this headline">¶</a></h3>
+<p>GUI that is spawned within Blender that runs various functions.</p>
+<blockquote>
+<div><p><strong>Functions:</strong></p>
+<blockquote>
+<div><dl class="py function">
+<dt id="id0">
+<code class="sig-name descname">setupUi</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#id0" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Description: Creates the main window for the GUI</p>
+<dl class="py function">
+<dt id="deparentRoutine">
+<code class="sig-name descname">deparentRoutine</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#deparentRoutine" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Description: De-Parent Routine runs the <span class="xref std std-ref">Flatten Model Tree function</span>.</p>
+<dl class="py function">
+<dt id="centerRoutine">
+<code class="sig-name descname">centerRoutine</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#centerRoutine" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Description: Center Routine runs the <a class="reference internal" href="feat.html#center-model"><span class="std std-ref">Center Model function</span></a>.</p>
+<dl class="py function">
+<dt id="deleteRoutine">
+<code class="sig-name descname">deleteRoutine</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#deleteRoutine" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Description: Delete Routine runs the <a class="reference internal" href="feat.html#delete-hidden-objects"><span class="std std-ref">Delete Hidden Objects function</span></a>.</p>
+<dl class="py function">
+<dt id="cleanRoutine">
+<code class="sig-name descname">cleanRoutine</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cleanRoutine" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Description: Clean Routine runs the <a class="reference internal" href="feat.html#clean-up-remove-small-components"><span class="std std-ref">Clean Small Components function</span></a>.</p>
+<dl class="py function">
+<dt id="decimateRoutine">
+<code class="sig-name descname">decimateRoutine</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#decimateRoutine" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Description: Decimate Routine runs the <a class="reference internal" href="feat.html#decimation"><span class="std std-ref">Decimation function</span></a>.</p>
+<dl class="py function">
+<dt id="exportRoutine">
+<code class="sig-name descname">exportRoutine</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#exportRoutine" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Description: Runs the export function based on input originally given by user.</p>
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="errorlog-py">
+<h3>errorLog.py<a class="headerlink" href="#errorlog-py" title="Permalink to this headline">¶</a></h3>
+<p>Creates a new GUI for error reporting and then opens an email interface.</p>
+<blockquote>
+<div><p><strong>Functions:</strong></p>
+<blockquote>
+<div><dl class="py function">
+<dt id="errorReport">
+<code class="sig-name descname">errorReport</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#errorReport" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Description: Creates the main window for the GUI</p>
+<dl class="py function">
+<dt id="b_crash">
+<code class="sig-name descname">b_crash</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#b_crash" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Description: Detects if there is a Blender crash file and returns true if there is.</p>
+<dl class="py function">
+<dt id="on_click">
+<code class="sig-name descname">on_click</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#on_click" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Description: Grabs the latest info from the log file and creates a prompt for the user to email it to support.</p>
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="import-catia-dae-v2-py">
+<h3>import_catia_dae_v2.py<a class="headerlink" href="#import-catia-dae-v2-py" title="Permalink to this headline">¶</a></h3>
+<p>Processes a .dae file for import into Blender</p>
+</div>
+<div class="section" id="importexport-py">
+<h3>importExport.py<a class="headerlink" href="#importexport-py" title="Permalink to this headline">¶</a></h3>
+<p>Both import and exports based on information given by the user.</p>
+<blockquote>
+<div><p><strong>Functions:</strong></p>
+<blockquote>
+<div><dl class="py function">
+<dt id="modelImport">
+<code class="sig-name descname">modelImport</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">inputPath</span></em><span class="sig-paren">)</span><a class="headerlink" href="#modelImport" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Description: Imports the model depending on the extension type.</p>
+<dl class="py function">
+<dt id="exportModels">
+<code class="sig-name descname">exportModels</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filePath</span></em><span class="sig-paren">)</span><a class="headerlink" href="#exportModels" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Description: Exports the scene into a GLTF format by default, can be changed by user.</p>
+<dl class="py function">
+<dt id="exportSelections">
+<code class="sig-name descname">exportSelections</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filePath</span></em><span class="sig-paren">)</span><a class="headerlink" href="#exportSelections" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Description: Exports the user’s selection into a GLTF format by default, can be changed by user.</p>
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="modelprep-py">
+<h3>modelPrep.py<a class="headerlink" href="#modelprep-py" title="Permalink to this headline">¶</a></h3>
+<p>Contains most functions for model manipulation.</p>
+<blockquote>
+<div><p><strong>Functions:</strong></p>
+<blockquote>
+<div><dl class="py function">
+<dt id="flatten">
+<code class="sig-name descname">flatten</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">o</span></em><span class="sig-paren">)</span><a class="headerlink" href="#flatten" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Description: Flatten executes the <span class="xref std std-ref">Flatten Model Tree function</span>.</p>
+<dl class="py function">
+<dt id="deParent">
+<code class="sig-name descname">deParent</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#deParent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Description: De-Parent prepares the model for the <span class="xref std std-ref">Flatten Model Tree function</span>.</p>
+<dl class="py function">
+<dt id="centerModels">
+<code class="sig-name descname">centerModels</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sepByLoose</span></em><span class="sig-paren">)</span><a class="headerlink" href="#centerModels" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Description: Center executes the <a class="reference internal" href="feat.html#center-model"><span class="std std-ref">Center Model function</span></a>.</p>
+<dl class="py function">
+<dt id="deleteHidden">
+<code class="sig-name descname">deleteHidden</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#deleteHidden" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Description: Delete Hidden executes the <a class="reference internal" href="feat.html#delete-hidden-objects"><span class="std std-ref">Delete Hidden Objects function</span></a>.</p>
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="operatortest-py">
+<h3>operatorTest.py<a class="headerlink" href="#operatortest-py" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p><strong>Functions:</strong></p>
+<blockquote>
+<div><dl class="py function">
+<dt id="AssembleOverrideContextForView3dOps">
+<code class="sig-name descname">AssembleOverrideContextForView3dOps</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AssembleOverrideContextForView3dOps" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Description: Iterates through the blender GUI’s windows, screens, areas, regions to find the View3D space and its associated window.  Populate a ‘oContextOverride context’ that can be used with bpy.ops that require to be used from within a View3D (like most addon code that runs of View3D panels)</p>
+<dl class="py function">
+<dt id="TestView3dOperatorFromPythonScript">
+<code class="sig-name descname">TestView3dOperatorFromPythonScript</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#TestView3dOperatorFromPythonScript" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Description: Run this from a python script and operators that would normally fail because they were not called from a View3D context will work.</p>
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="processmodels-py">
+<h3>processModels.py<a class="headerlink" href="#processmodels-py" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p><strong>Functions:</strong></p>
+<blockquote>
+<div><dl class="py function">
+<dt id="apply_modifiers">
+<code class="sig-name descname">apply_modifiers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#apply_modifiers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Description: Executes all the modifies the user as selected</p>
+<dl class="py function">
+<dt id="decimateModels">
+<code class="sig-name descname">decimateModels</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">decRatio</span></em><span class="sig-paren">)</span><a class="headerlink" href="#decimateModels" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Description: Decimate the models in the scene given</p>
+<dl class="py function">
+<dt id="cleanUp">
+<code class="sig-name descname">cleanUp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">percent</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cleanUp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Description: Removes all small objects such as screws from the scene.</p>
+<ol class="arabic simple">
+<li><p>Record bounding box of the scene.</p></li>
+<li><p>Calculate percentage threshold for removal</p></li>
+<li><p>Compare items to removal threshold and mark for deletion</p></li>
+<li><p>Delete small object under threshold</p></li>
+</ol>
+</div></blockquote>
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="update.html" class="btn btn-neutral float-right" title="Planned Updates" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="faq.html" class="btn btn-neutral float-left" title="FAQ" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019,IT-C1 NASA
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

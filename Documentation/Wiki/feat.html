@@ -1,0 +1,373 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Features &mdash; RMIT 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="FAQ" href="faq.html" />
+    <link rel="prev" title="Introduction" href="intro.html" /> 
+<link rel="stylesheet" type="text/css" href="_static/handsontable.full.min.css">
+<script src="_static/handsontable.full.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> RMIT
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Features</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#workflow">Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exporting-importing-and-file-types">Exporting/Importing and File Types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#rmit-natively-imports-the-following-file-types">RMIT natively imports the following file types:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rmit-natively-exports-the-following-file-types">RMIT natively exports the following file types:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#functions">Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#clean-up-remove-small-components">Clean up/Remove Small Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#extract-object">Extract Object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#delete-hidden-objects">Delete Hidden Objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decimation">Decimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#separate-loose-meshes">Separate Loose Meshes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#center-model">Center Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#merge-meshes">Merge Meshes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#headless-mode">Headless Mode</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="source.html">Source</a></li>
+<li class="toctree-l1"><a class="reference internal" href="update.html">Planned Updates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact Info</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">RMIT</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Features</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/feat.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="features">
+<h1>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h1>
+<p>This section will layout all that you need to know to work with and interact with RMIT at an end user perspective</p>
+<div class="section" id="workflow">
+<h2>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h2>
+<p>To start using RMIT you will launch the RMIT.exe application. This will lead you into the RMIT launch window as seen below.
+The first thing to do is select an import file and export file as seen below</p>
+<div class="figure align-center" id="id1">
+<img alt="_images\RMIT3.png" src="_images\RMIT3.png" />
+<p class="caption"><span class="caption-text">Import Export Area</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>After selecting the import and export location the next step is to either disable or enable the headless mode.
+<strong>Headless mode</strong> will run everything in the background with the settings set by the user.
+Available settings enabled in headless mode are described in the features section.</p>
+<p>If a user runs RMIT in its normal function blender will open and the following window will appear.</p>
+<div class="figure align-center" id="id2">
+<img alt="_images\RMIT2.png" src="_images\RMIT2.png" />
+<p class="caption"><span class="caption-text">The Blender window of RMIT</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>The user can then run the various functions listed within the GUI or run Blender as normally.
+For these functions if the user has no objects selected it will be run on the entire model.
+If the user has a single or multiple object selected the functions will be run on just that selection.
+A function can be undone by running ctrl-z.
+When the user is done interacting with both Blender and RMIT they may run the export function, and then close the program.</p>
+</div>
+<div class="section" id="exporting-importing-and-file-types">
+<span id="filetypes"></span><h2>Exporting/Importing and File Types<a class="headerlink" href="#exporting-importing-and-file-types" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="rmit-natively-imports-the-following-file-types">
+<h3>RMIT natively imports the following file types:<a class="headerlink" href="#rmit-natively-imports-the-following-file-types" title="Permalink to this headline">¶</a></h3>
+<table class="docutils align-default" id="id3">
+<caption><span class="caption-text">RMIT Import Types</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>File Format</p></th>
+<th class="head"><p>RMIT import Compatibility</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>.dae (COLLADA)</p></td>
+<td><p>Only OpenCOLLADA format</p></td>
+</tr>
+<tr class="row-odd"><td><p>.fbx</p></td>
+<td><p>fbx version 7100 or newer.</p></td>
+</tr>
+<tr class="row-even"><td><p>.gltf (Graphic Language Transmission Format)</p></td>
+<td><p>Fully Compatible</p></td>
+</tr>
+<tr class="row-odd"><td><p>.glb</p></td>
+<td><p>Fully Compatible</p></td>
+</tr>
+<tr class="row-even"><td><p>.obj (Wavefront)</p></td>
+<td><p>Fully Compatible</p></td>
+</tr>
+<tr class="row-odd"><td><p>.ply (Stanford)</p></td>
+<td><p>Fully Compatible</p></td>
+</tr>
+<tr class="row-even"><td><p>.stl</p></td>
+<td><p>Fully Compatible</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rmit-natively-exports-the-following-file-types">
+<h3>RMIT natively exports the following file types:<a class="headerlink" href="#rmit-natively-exports-the-following-file-types" title="Permalink to this headline">¶</a></h3>
+<table class="docutils align-default" id="id4">
+<caption><span class="caption-text">RMIT Export Types</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>File Format</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>.dae (COLLADA)</p></td>
+</tr>
+<tr class="row-odd"><td><p>.fbx</p></td>
+</tr>
+<tr class="row-even"><td><p>.gltf (Graphic Language Transmission Format)</p></td>
+</tr>
+<tr class="row-odd"><td><p>.obj (Wavefront)</p></td>
+</tr>
+<tr class="row-even"><td><p>.stl</p></td>
+</tr>
+</tbody>
+</table>
+<p>By default RMIT will export in .gltf format</p>
+</div>
+</div>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<p>RMIT has several customized features that allow you to edit and clean your model:</p>
+<div class="section" id="clean-up-remove-small-components">
+<h3>Clean up/Remove Small Components<a class="headerlink" href="#clean-up-remove-small-components" title="Permalink to this headline">¶</a></h3>
+<p>The Remove Small Components Function will create a bounding box of the scene, and will remove objects that are smaller than the input ratio to the scene bounding box.</p>
+<p>You would use this function if you did not care about small details of your model.</p>
+</div>
+<div class="section" id="extract-object">
+<h3>Extract Object<a class="headerlink" href="#extract-object" title="Permalink to this headline">¶</a></h3>
+<p>The Extract Object function loops through all objects and then their hierarchy it then removes the hierarchy starting with the head and then
+empty objects are removed. After the function is run all objects will be within the same hierarchy level.</p>
+<p>You would use this function if you did not care about the hierarchy of your model.</p>
+</div>
+<div class="section" id="delete-hidden-objects">
+<h3>Delete Hidden Objects<a class="headerlink" href="#delete-hidden-objects" title="Permalink to this headline">¶</a></h3>
+<p>The Delete Hidden Objects Function will delete any object not seen from the exterior of the selection.</p>
+<p>You would use this function if you did not need to see the internals of your model or break it apart in any way.</p>
+</div>
+<div class="section" id="decimation">
+<h3>Decimation<a class="headerlink" href="#decimation" title="Permalink to this headline">¶</a></h3>
+<p>The Decimation Function will reduce the polygon count using the default blender decimation algorithm.</p>
+<p>You would use this function if your model was too complex for your application or if you care more about the speed of your application than quality.</p>
+</div>
+<div class="section" id="separate-loose-meshes">
+<h3>Separate Loose Meshes<a class="headerlink" href="#separate-loose-meshes" title="Permalink to this headline">¶</a></h3>
+<p>The Separate Loose Meshes function will break up a mesh into smaller components if there are non connecting complete meshes.
+A good example would be if there are two spheres that are not touching but share the same mesh, these would be made into seperate objects with this function.</p>
+<p>You would use this function if you wanted to interact with what appear to be seperate objects within your model.</p>
+</div>
+<div class="section" id="center-model">
+<h3>Center Model<a class="headerlink" href="#center-model" title="Permalink to this headline">¶</a></h3>
+<p>The Center Model function will move the origin of each object to the center of its mesh</p>
+<p>You would use this function if you plan on applying transformations to a certain object in your application</p>
+</div>
+<div class="section" id="merge-meshes">
+<h3>Merge Meshes<a class="headerlink" href="#merge-meshes" title="Permalink to this headline">¶</a></h3>
+<p>The Merge Meshes Function will merge any mesh together into a single object as well as removing duplicate materials.</p>
+<p>You would use this function if you did not want to take apart your model, and wanted to make it much more light weight.</p>
+</div>
+<div class="section" id="headless-mode">
+<h3>Headless Mode<a class="headerlink" href="#headless-mode" title="Permalink to this headline">¶</a></h3>
+<p>Headless mode can run all these functions without opening blender. This is extremely useful if you know exactly how you want to process your model.
+The functions will be ran on all the objects. The order of the functions ran is the following:</p>
+<p>Extract Objet/Delete any relation (This will remove and non mesh objects)
+Remove hidden
+Seperate Loose Meshes
+Remove Small objects (you will set the ratio)
+Merge all objects together
+Center Objects
+Decimation (you will set the amount)</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="faq.html" class="btn btn-neutral float-right" title="FAQ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="intro.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019,IT-C1 NASA
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

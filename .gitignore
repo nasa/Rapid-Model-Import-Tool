@@ -1,0 +1,59 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# C extensions
+*.so
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+.history
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+/testModels
+
+# Translations
+*.mo
+
+# Mr Developer
+.idea/workspace.xml
+.vscode/settings.json
+.vscode/launch.json
+.vscode/*.json
+
+# Sphinx documentation
+docs/_build/
+
+# Blender PlugIn Build
+Development/RMIT/dist
+Development/RMIT/build/
+/RMIT/RMITGUIProcess.spec
+/RMIT/*.txt
+/Development/Blender_Clients/_Archive
+Development.zip
+Development/RMIT_TEST/testModels/
+/config/bookmarks.txt
+/config/userpref/blend
+/config/recent-files.txt
+/python/lib/__pycache__
+startup/bl_operators/__pycache__/
+*.pyc
+
+
+# Local Logs
+/Personal_Bug_Tracker
+dataProcessingLogs.txt
+time_log.txt
+Bug_Report.txt
+/Development/RMIT/*.log
+/Development/RMIT/.history
+Development/RMIT_TEST/RMIT.log
+
+startup/bl_operators/__pycache__
+Development/Blender_Clients/blender-2.81.0-8-28-19/2.81/config/bookmarks.txt
+Development/Blender_Clients/blender-2.81.0-8-28-19/2.81/config/recent-files.txt

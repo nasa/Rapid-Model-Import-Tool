@@ -1,0 +1,6 @@
+{
+    "python.pythonPath": "C:\\Python64bit\\python.exe",
+    "python.linting.pep8Enabled": false,
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true
+}

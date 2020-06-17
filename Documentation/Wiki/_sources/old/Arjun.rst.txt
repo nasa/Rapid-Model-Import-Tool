@@ -1,0 +1,38 @@
+Arjun Ayyangar  Rapid Model Import Tool (RMIT) Abstract
+==========================================================
+
+Our project is about developing a tool to implement conversion of 3D Computer Aided Design (CAD) models produced with
+software such as Delmia, 3DS Max, or Maya, into a size and format compatible with the Unity 3D environment. RMIT will be
+used to aid KSC engineering personnel in the design, development, testing, operations, and training on spacecraft, launch
+vehicles, facilities, and ground support equipment. For our project, we are using Blender, a free/open-source 3D graphics
+software, with the goal of developing, testing, and deploying a 3D CAD model converter tool.
+
+I worked on using Blender to import 3D CAD models exported from CATIA software into Collada file format. The Collada file
+format has file extension DAE. Importing the Collada DAE file as is into Blender, generates dots and dashes. In 3DS Max,
+there is an existing OpenCollada plugin and with that plugin, 3DS Max can import the DAE file successfully. But, Blender
+does not seem to have an OpenCollada plugin, so I worked on writing a new OpenCollada plugin for Blender. Since 3DS Max was
+able to display the image, I looked into comparing differences between the original DAE file and the DAE file exported from
+3DS Max using the OpenCollada plugin. As Collada documents describing digital assets are XML files with file extension DAE,
+Collada files contains XML tags, making them easily modifiable.
+
+After some research, it appears that Blender does not like primitive 2D tags like tristrips and trifans. Changing those
+tags to polygons slightly improved the image, but the pieces were exploded. I found after further research comparing differences
+between the original file and the file exported from 3DS Max that the values inside the translate tags in the original file
+are scaled down by a factor of 25.4 in the exported file from 3DS Max, representing the millimeters to inches conversion
+(1 inch = 25.4 millimeters). After scaling down values inside all of the translate tags by 25.4, the exploded pieces stuck
+back in, but the image needed further improvement.
+
+I have been able to create a new plugin in Blender that takes the original DAE file, replaces the primitive 2D tags tristrips
+and trifans with polygons, scales down the values inside the translate tags by a factor of 25.4, and saves the changes into a
+temporary DAE file. After the temporary DAE file is imported into Blender, the temp file is then deleted, keeping the original
+DAE file intact.
+
+Starting with a DAE file that is exported using the NASA Enterprise Visualization Application (NEVA), a Collada exporter,
+from CATIA gives better results. NEVA is a Design Visualization product that is used for exporting 3D models from CATIA.
+With NEVA, the up axis is defined in the top-level node if navigation gravity is enabled. With that file, just replacing
+the primitive tags tristrips and trifans with polygons in yields a much improved image in Blender. As we identify more
+differences between the original DAE file and the DAE file exported from 3DS Max, this plugin can be improved further.
+Our goal is to have a model that is formatted and sized for import into Unity, and we are trying out different 3D programs
+to see which will work best.
+
+

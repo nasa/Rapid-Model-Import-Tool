@@ -1,0 +1,48 @@
+Git Installation Notes for client..
+
+Step 1: Install OpenSSH on Client 
+(https://github.com/PowerShell/Win32-OpenSSH/wiki/Install-Win32-OpenSSH)
+	- Click on "latest" to go to download page
+		- Go to the table at the bottom of the page
+		- Click on "OpenSSH-Win32.zip" to download
+	- Download Zip files, extract all to C:/Program Files
+	- CD into your OpenSSH folder i.e. C:\Program Files\OpenSSH-Win32
+	- Accept all defaults during installation
+		- Note folder name: OpenSSH-Win32
+	- Return to GitHub page listed above
+	- Continue with steps 4, 5, 6
+		- Open Powershell as Admin
+		- cd c:\Program Files\OpenSSH-Win32
+		- run powershell.exe -ExecutionPolicy Bypass -File install-sshd.ps1
+		On client, run netsh advfirewall firewall add rule name=sshd dir=in action=allow protocol=TCP localport=22 
+
+Step 2: Install Git on Client
+	- https://git-scm.com/download/win
+
+Step 3: Install Putty on Client
+	- https://www.putty.org
+
+Step 4: Test SSH with Putty. IP: 10.111.181.16 port 22
+
+Step 5: Set up Git Client. Follow the client instructions and do the first optional only.  
+	- (https://github.com/PowerShell/Win32-OpenSSH/wiki/Setting-up-a-Git-server-on-Windows-using-Git-for-Windows-and-Win32_OpenSSH)
+	- *At this point you should have a .git folder in the folder you created from the above websites steps.*
+	- IP is: avr@10.111.181.16:D:\RMIT_REPO.git
+
+Step 6:The powershell command is: git pull origin master. This means using git to pull the latest branch located at origin>master.
+This will populate the folder with the rep files.
+You must do this in the folder that has the repo in it. AKA .git folder. 
+
+*Additional Notes*
+To push files to GIT
+From inside git local git repo folder
+1. git add .
+2. git status
+3. git commit -m "Some message"
+4. git push
+
+*Optional*
+Install tortiosegit for windows explorer git options. Allows easy git use from a context menu in windows explorer.
+
+*POWERSHELL CAN'T FIND GIT*
+You can use Git Bash if you don't want to set the git environment PATH variable. 
